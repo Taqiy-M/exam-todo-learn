@@ -22,7 +22,26 @@ def todo_index(request):
         return render(request, 'index.html', data)
     return redirect('/login/')
 
+
+def yana_qoshimcha(fun):
+    print("Hello world!!"
+          "")
+    print("ZED IT ACADEMY")
+
+
+
 def delete_todo(request, a):
     Todo.objects.filter(id=a).delete()
     return redirect('/')
 
+
+def hello_world(hello):
+    print("Hello Guys!! Whatsup")
+
+
+def hello_world1(hello):
+    print("Hello Guys!! Whatsup")
+
+
+def hello_world2(hello):
+    print("Hello Guys!! Whatsup")
