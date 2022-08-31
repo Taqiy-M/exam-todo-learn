@@ -45,3 +45,12 @@ def hello_world1(hello):
 
 def hello_world2(hello):
     print("Hello Guys!! Whatsup")
+
+
+def hello_world22(hello):
+    print("Hello Guys!! Whatsup")
+
+
+
+def hello_world12(hello):
+    print("Hello Guys!! Whatsup")
