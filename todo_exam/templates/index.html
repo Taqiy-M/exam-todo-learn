@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+</head>
+<body style="text-align:center;">
+
+
+    {% for i in todo %}
+    <div style="margin:40px 450px;background-color:cyan;">
+        <h3> {{i.title}} </h3>
+        <p> {{i.status}} </p>
+        <p> {{i.description}} </p>
+        <p> {{i.sana}} </p>
+        <hr>
+        <a href="/delete-todo/{{i.id}}/"><button>O'chirish</button></a>
+    </div>
+    {% endfor %}
+
+    <form action="/" method="post"> {% csrf_token %}
+        <p><input type="text" name="title" placeholder="title"></p>
+        <p><input type="datetime-local" name="sana"></p>
+        <p><input type="text" name="desc" placeholder="description"></p>
+
+        <p><select name="status">
+            <option>bajarildi</option>
+            <option>bajarilmadi</option>
+        </select></p>
+
+        <p><select name="student">
+            {% for i in students %}
+            <option value="{{i.id}}">{{i.ism}}</option>
+            {% endfor %}
+        </select></p>
+
+        <p><button type="submit">Qo'shish</button></p>
+    </form>
+
+
+</body>
+</html>
